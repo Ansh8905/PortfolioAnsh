@@ -140,7 +140,7 @@ export default function GitHubAnalytics() {
 
                     {/* Language Distribution */}
                     <motion.div
-                        className="glass-card p-10 mb-14"
+                        className="glass-card p-10"
                         initial={{ opacity: 0, y: 20 }}
                         animate={inView ? { opacity: 1, y: 0 } : {}}
                         transition={{ delay: 0.3 }}
@@ -180,52 +180,6 @@ export default function GitHubAnalytics() {
                             ))}
                         </div>
                     </motion.div>
-
-                    {/* Pinned Repos */}
-                    <div>
-                        <h3 className="text-white font-bold text-xl mb-8">
-                            📌 Pinned Repositories
-                        </h3>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {pinnedRepos.map(({ name, desc, lang, color, stars, url }, i) => (
-                                <motion.a
-                                    key={name}
-                                    href={url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="glass-card p-7 block group"
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={inView ? { opacity: 1, y: 0 } : {}}
-                                    transition={{ delay: 0.5 + i * 0.08 }}
-                                    whileHover={{ y: -3 }}
-                                >
-                                    <div className="flex items-start justify-between mb-4">
-                                        <div className="flex items-center gap-2.5">
-                                            <BookOpen className="w-4 h-4 text-cyan-400" />
-                                            <span className="text-white font-semibold text-sm group-hover:text-cyan-400 transition-colors truncate">
-                                                {name}
-                                            </span>
-                                        </div>
-                                        {stars > 0 && (
-                                            <span className="flex items-center gap-1 text-yellow-400 text-xs">
-                                                <Star className="w-3 h-3 fill-current" /> {stars}
-                                            </span>
-                                        )}
-                                    </div>
-                                    <p className="text-slate-500 text-[13px] leading-[1.7] mb-5">
-                                        {desc}
-                                    </p>
-                                    <div className="flex items-center gap-2.5">
-                                        <span
-                                            className="w-2.5 h-2.5 rounded-full"
-                                            style={{ background: color }}
-                                        />
-                                        <span className="text-slate-600 text-xs">{lang}</span>
-                                    </div>
-                                </motion.a>
-                            ))}
-                        </div>
-                    </div>
                 </motion.div>
             </div>
         </section>

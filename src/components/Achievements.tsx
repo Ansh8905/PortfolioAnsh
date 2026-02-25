@@ -25,16 +25,6 @@ const achievements = [
         tags: ["Runner-Up 🥈", "Innovation"],
         year: "2024",
     },
-    {
-        icon: <Heart className="w-6 h-6" />,
-        color: "#ec4899",
-        gradient: "from-pink-500/15 to-rose-600/15",
-        title: "Volunteer – Slum Swaraj Foundation",
-        org: "Social Impact Initiative",
-        desc: "Active volunteer contributing to community upliftment and educational outreach programs beyond technical work.",
-        tags: ["Social Impact", "Education"],
-        year: "2024",
-    },
 ];
 
 const certifications = [

@@ -68,7 +68,7 @@ export default function Navbar() {
                         </motion.button>
 
                         {/* Desktop Links */}
-                        <div className="hidden md:flex items-center gap-8">
+                        <div className="hidden md:flex items-center gap-12">
                             {navLinks.map((link) => {
                                 const sectionId = link.href.slice(1);
                                 const isActive = activeSection === sectionId;
@@ -77,8 +77,8 @@ export default function Navbar() {
                                         key={link.label}
                                         onClick={() => scrollTo(link.href)}
                                         className={`relative text-[13px] font-medium transition-all duration-200 hover-underline ${isActive
-                                                ? "neon-text"
-                                                : "text-slate-400 hover:text-white"
+                                            ? "neon-text"
+                                            : "text-slate-400 hover:text-white"
                                             }`}
                                     >
                                         {link.label}
@@ -96,9 +96,10 @@ export default function Navbar() {
                         {/* CTA + Hamburger */}
                         <div className="flex items-center gap-4">
                             <motion.a
-                                href="/resume.pdf"
-                                download
-                                className="hidden md:inline-flex btn-neon text-xs py-2.5 px-5"
+                                href="https://drive.google.com/file/d/1Cf_A-OSFmL7fZBE3sU4SUCm0iyT2r2EQ/view?usp=drive_link"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hidden md:inline-flex btn-neon text-xs py-3 px-7"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
@@ -139,11 +140,12 @@ export default function Navbar() {
                                 </button>
                             ))}
                             <a
-                                href="/resume.pdf"
-                                download
+                                href="https://drive.google.com/file/d/1Cf_A-OSFmL7fZBE3sU4SUCm0iyT2r2EQ/view?usp=drive_link"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="btn-neon text-center mt-4"
                             >
-                                Download Resume
+                                View Resume
                             </a>
                         </div>
                     </motion.div>

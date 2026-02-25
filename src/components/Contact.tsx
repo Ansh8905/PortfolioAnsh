@@ -114,7 +114,7 @@ export default function Contact() {
                         </p>
                     </div>
 
-                    <div className="grid lg:grid-cols-5 gap-12 max-w-5xl mx-auto">
+                    <div className="grid lg:grid-cols-5 gap-16 max-w-5xl mx-auto">
                         {/* Contact Form */}
                         <motion.div
                             className="lg:col-span-3"
@@ -122,12 +122,12 @@ export default function Contact() {
                             animate={inView ? { opacity: 1, x: 0 } : {}}
                             transition={{ delay: 0.2 }}
                         >
-                            <form onSubmit={handleSubmit} className="glass-card p-10">
+                            <form onSubmit={handleSubmit} className="glass-card p-12">
                                 <h3 className="text-white font-bold text-lg mb-8">
                                     Send a Message
                                 </h3>
 
-                                <div className="grid md:grid-cols-2 gap-5 mb-5">
+                                <div className="grid md:grid-cols-2 gap-8 mb-8">
                                     <div>
                                         <label className="text-slate-500 text-xs font-medium mb-2 block uppercase tracking-wider">
                                             Name
@@ -160,7 +160,7 @@ export default function Contact() {
                                     </div>
                                 </div>
 
-                                <div className="mb-5">
+                                <div className="mb-8">
                                     <label className="text-slate-500 text-xs font-medium mb-2 block uppercase tracking-wider">
                                         Subject
                                     </label>
@@ -171,7 +171,7 @@ export default function Contact() {
                                         onChange={(e) =>
                                             setForm({ ...form, subject: e.target.value })
                                         }
-                                        className="w-full bg-white/[0.03] border border-white/[0.08] rounded-xl px-5 py-3.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-cyan-400/40 transition-colors"
+                                        className="w-full bg-white/[0.03] border border-white/[0.08] rounded-xl px-6 py-4.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-cyan-400/40 transition-all duration-200"
                                         placeholder="What's this about?"
                                     />
                                 </div>
@@ -241,11 +241,11 @@ export default function Contact() {
                             animate={inView ? { opacity: 1, x: 0 } : {}}
                             transition={{ delay: 0.3 }}
                         >
-                            <div className="glass-card p-10 mb-8">
+                            <div className="glass-card p-12 mb-10">
                                 <h3 className="text-white font-bold text-lg mb-8">
                                     Contact Info
                                 </h3>
-                                <div className="space-y-6">
+                                <div className="space-y-9">
                                     {contactInfo.map(({ icon, label, value, href, color }) => {
                                         const Wrapper = href ? "a" : "div";
                                         return (

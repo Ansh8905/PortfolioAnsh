@@ -19,15 +19,16 @@
   --glow-blue-strong: 0 0 50px rgba(0, 212, 255, 0.3);
 
   /* Spacing scale */
-  --space-xs: 8px;
-  --space-sm: 12px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 32px;
-  --space-2xl: 48px;
-  --space-3xl: 64px;
-  --space-4xl: 80px;
-  --space-section: 140px;
+  /* Spacing scale - Extra Breathable */
+  --space-xs: 12px;
+  --space-sm: 16px;
+  --space-md: 20px;
+  --space-lg: 32px;
+  --space-xl: 44px;
+  --space-2xl: 64px;
+  --space-3xl: 88px;
+  --space-4xl: 120px;
+  --space-section: 180px;
 }
 
 /* ─── Reset ─── */
@@ -83,9 +84,9 @@ body {
 }
 
 .container-max {
-  max-width: 1140px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 40px;
 }
 
 @media (max-width: 768px) {
@@ -389,9 +390,9 @@ body {
 /* ─── Section Divider ─── */
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
-  margin: 0 auto;
-  max-width: 800px;
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.08), transparent);
+  margin: var(--space-4xl) auto;
+  max-width: 900px;
 }
 
 /* ─── Animations ─── */

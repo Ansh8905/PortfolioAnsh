@@ -185,7 +185,7 @@ export default function Projects() {
                     </div>
 
                     {/* Projects */}
-                    <div className="space-y-8">
+                    <div className="space-y-20">
                         {projects.map((project, i) => {
                             const isOpen = expandedId === project.id;
                             return (
@@ -204,7 +204,7 @@ export default function Projects() {
                                 >
                                     {/* Header Row */}
                                     <button
-                                        className="w-full text-left p-8 md:p-10"
+                                        className="w-full text-left p-10 md:p-14"
                                         onClick={() =>
                                             setExpandedId(isOpen ? null : project.id)
                                         }
@@ -285,10 +285,10 @@ export default function Projects() {
                                                 className="overflow-hidden"
                                             >
                                                 <div
-                                                    className="px-8 md:px-10 pb-10 pt-2 border-t"
+                                                    className="px-10 md:px-14 pb-14 pt-4 border-t"
                                                     style={{ borderColor: `${project.color}15` }}
                                                 >
-                                                    <div className="grid md:grid-cols-2 gap-12 mt-8">
+                                                    <div className="grid md:grid-cols-2 gap-16 mt-12">
                                                         {/* Left */}
                                                         <div className="space-y-8">
                                                             {/* Problem */}
@@ -441,7 +441,7 @@ export default function Projects() {
 
                     {/* View All */}
                     <motion.div
-                        className="text-center mt-16"
+                        className="text-center mt-24"
                         initial={{ opacity: 0 }}
                         animate={inView ? { opacity: 1 } : {}}
                         transition={{ delay: 0.6 }}

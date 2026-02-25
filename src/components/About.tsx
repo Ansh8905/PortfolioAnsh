@@ -80,14 +80,14 @@ export default function About() {
                         </h2>
                     </div>
 
-                    <div className="grid lg:grid-cols-2 gap-16 items-start">
+                    <div className="grid lg:grid-cols-2 gap-24 items-start">
                         {/* Left – Summary */}
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             animate={inView ? { opacity: 1, x: 0 } : {}}
                             transition={{ duration: 0.7, delay: 0.2 }}
                         >
-                            <div className="space-y-6 text-slate-300 text-[16px] leading-[1.8] mb-10">
+                            <div className="space-y-9 text-slate-300 text-[16px] leading-[1.85] mb-14">
                                 <p>
                                     I&#39;m a{" "}
                                     <span className="text-cyan-400 font-semibold">
@@ -122,7 +122,7 @@ export default function About() {
                             </div>
 
                             {/* Education Card */}
-                            <div className="glass-card p-7 border-l-4 border-l-cyan-400/60">
+                            <div className="glass-card p-10 border-l-4 border-l-cyan-400/60 shadow-xl">
                                 <div className="flex items-start gap-5">
                                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-400/15 to-blue-600/15 flex items-center justify-center flex-shrink-0">
                                         <GraduationCap className="w-6 h-6 text-cyan-400" />
@@ -155,20 +155,20 @@ export default function About() {
                             initial={{ opacity: 0, x: 30 }}
                             animate={inView ? { opacity: 1, x: 0 } : {}}
                             transition={{ duration: 0.7, delay: 0.3 }}
-                            className="grid grid-cols-1 sm:grid-cols-2 gap-5"
+                            className="grid grid-cols-1 sm:grid-cols-2 gap-8"
                         >
                             {strengths.map(({ icon, title, desc }, i) => (
                                 <motion.div
                                     key={title}
-                                    className="glass-card p-6 group"
+                                    className="glass-card p-8 group hover:bg-white/[0.04] transition-all duration-300"
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={inView ? { opacity: 1, y: 0 } : {}}
                                     transition={{ delay: 0.3 + i * 0.08 }}
                                 >
-                                    <div className="w-11 h-11 rounded-xl bg-cyan-400/8 flex items-center justify-center text-cyan-400 mb-4 group-hover:bg-cyan-400/15 transition-colors">
+                                    <div className="w-14 h-14 rounded-2xl bg-cyan-400/8 flex items-center justify-center text-cyan-400 mb-6 group-hover:scale-110 group-hover:bg-cyan-400/20 transition-all duration-300">
                                         {icon}
                                     </div>
-                                    <h4 className="text-white font-semibold text-sm mb-2">
+                                    <h4 className="text-white font-bold text-lg mb-3">
                                         {title}
                                     </h4>
                                     <p className="text-slate-500 text-[13px] leading-[1.7]">
